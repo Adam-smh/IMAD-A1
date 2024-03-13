@@ -13,7 +13,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val input = findViewById<EditText>(R.id.userIn)
-        val btn = findViewById<Button>(R.id.btnSubmit)
+        val btnCheckAge = findViewById<Button>(R.id.btnSubmit)
+        val btnClear = findViewById<Button>(R.id.btnClear)
         val err = findViewById<TextView>(R.id.errorMsg)
         val resDisplay = findViewById<TextView>(R.id.resDisplay)
 
@@ -32,11 +33,16 @@ class MainActivity : AppCompatActivity() {
             NameAge("Betty White", 99),
             NameAge("Aaliyah", 22),
         )
-        btn.setOnClickListener {
 
+        btnClear.setOnClickListener {
             err.text = ""
             resDisplay.text = ""
+            input.text.clear()
+        }
 
+        btnCheckAge.setOnClickListener {
+            err.text = ""
+            resDisplay.text = ""
 
             val ageIn = input.text.toString().toIntOrNull()
             if (ageIn != null){
@@ -54,6 +60,8 @@ class MainActivity : AppCompatActivity() {
             }
             input.text.clear()
         }
+
+
     }
 
 

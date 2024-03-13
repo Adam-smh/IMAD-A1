@@ -91,7 +91,7 @@
         app:layout_constraintTop_toBottomOf="@+id/userIn" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnClear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
