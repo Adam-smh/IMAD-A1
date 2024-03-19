@@ -6,9 +6,11 @@
     </style>
 
     <style name="Theme.IMADA1" parent="Base.Theme.IMADA1" />
+
     <style name="CardView." parent="CardView">
         <item name="android:foreground">
             @drawable/gradiant
         </item>
     </style>
+
 </resources>

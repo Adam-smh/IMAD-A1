@@ -39,22 +39,21 @@
         app:layout_constraintTop_toTopOf="@+id/bgImg" />
 
     <androidx.cardview.widget.CardView
-        app:cardCornerRadius="30dp"
-        android:background="@color/bg"
         android:layout_width="357dp"
-        android:layout_height="510dp"
+        android:layout_height="550dp"
+        android:background="@color/bg"
+        app:cardCornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.847">
+        app:layout_constraintTop_toBottomOf="@+id/appTitle">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:background="@color/bg"
-            android:padding="0dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/bg"
+            android:padding="0dp">
 
             <TextView
                 android:id="@+id/textView3"
@@ -84,15 +83,15 @@
 
             <EditText
                 android:id="@+id/userIn"
-                android:layout_width="48dp"
-                android:layout_height="51dp"
+                android:layout_width="63dp"
+                android:layout_height="46dp"
 
-                android:layout_marginTop="48dp"
+                android:layout_marginTop="32dp"
                 android:digits="0123456789"
                 android:hint="Age"
-                android:inputType="numberPassword"
+                android:inputType = "number"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintHorizontal_bias="0.517"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -101,11 +100,12 @@
 
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-
                 android:layout_marginStart="52dp"
 
+                android:backgroundTint="@color/smlBg"
                 android:text="Enter"
-                app:layout_constraintBottom_toTopOf="@+id/resDisplay"
+
+                android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/userIn"
                 app:layout_constraintVertical_bias="0.538" />
@@ -117,16 +117,19 @@
 
                 android:layout_marginEnd="44dp"
 
+                android:backgroundTint="@color/clearBtn"
                 android:text="Clear"
+
+                android:textColor="#000000"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/userIn"
                 app:layout_constraintVertical_bias="0.512" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/smlCard"
-                app:cardBackgroundColor="@color/bg"
                 android:layout_width="359dp"
                 android:layout_height="243dp"
+                app:cardBackgroundColor="@color/bg"
 
                 app:cardCornerRadius="30dp"
                 app:layout_constraintBottom_toBottomOf="parent"
