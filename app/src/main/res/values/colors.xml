@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="bg">#E7D2A6</color>
+    <color name="smlBg">#F5E3BD</color>
+    <color name="clearBtn">#F5BDBD</color>
     <color name="error">#FF0000</color>
+    <color name="disBack">#F5E3BD</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

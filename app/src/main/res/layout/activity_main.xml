@@ -4,127 +4,150 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/bg">
+    android:background="@color/bg"
+    tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="429dp"
-        android:layout_height="231dp"
+        android:id="@+id/bgImg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:adjustViewBounds="true"
         android:cropToPadding="false"
-        android:scaleType="fitCenter"
-        android:visibility="visible"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/download" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/bg"
+        android:foreground="@drawable/gradiant"/>
 
     <TextView
         android:id="@+id/appTitle"
-        android:layout_width="214dp"
-        android:layout_height="107dp"
+        android:layout_width="375dp"
+        android:layout_height="115dp"
 
-        android:text="The\nHistory App"
+        android:layout_marginTop="40dp"
+        android:text="THE\nHISTORY APP"
         android:textAlignment="center"
+        android:textColor="@color/white"
+
         android:textSize="40sp"
-
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:paddingTop="20dp"
-
-        android:text="Please Enter\nYour Age Below"
-        android:textAlignment="center"
-        android:textSize="30sp"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toTopOf="@+id/bgImg" />
 
-    <TextView
-        android:id="@+id/errorMsg"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-
-        android:text=""
-        android:textColor="@color/error"
-
-
-        app:layout_constraintBottom_toTopOf="@+id/userIn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/userIn"
-        android:layout_width="48dp"
-        android:layout_height="51dp"
-
-        android:digits="0123456789"
-        android:inputType="numberPassword"
-
-        android:layout_marginTop="44dp"
-        android:hint="Age"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <Button
-        android:id="@+id/btnSubmit"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="20dp"
-
-        android:onClick="checkAge"
-        android:text="Enter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userIn" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="96dp"
-        android:text="Clear"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userIn" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-
-        android:text=""
-        android:textAlignment="center"
-        android:textSize="40sp"
-
+    <androidx.cardview.widget.CardView
+        android:layout_width="357dp"
+        android:layout_height="550dp"
+        android:background="@color/bg"
+        app:cardCornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSubmit" />
+        app:layout_constraintTop_toBottomOf="@+id/appTitle">
 
-    <TextView
-        android:id="@+id/resDisplay"
-        android:layout_width="358dp"
-        android:layout_height="190dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg"
+            android:padding="0dp">
 
-        android:text=""
-        android:textSize="40sp"
-        android:textAlignment="center"
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+                android:paddingTop="20dp"
+                android:text="Please Enter\nYour Age Below"
+                android:textAlignment="center"
+
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/errorMsg"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+
+                android:text=""
+
+                android:textColor="@color/error"
+                app:layout_constraintBottom_toTopOf="@+id/userIn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/userIn"
+                android:layout_width="63dp"
+                android:layout_height="46dp"
+
+                android:layout_marginTop="32dp"
+                android:digits="0123456789"
+                android:hint="Age"
+                android:inputType = "number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.517"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="52dp"
+
+                android:backgroundTint="@color/smlBg"
+                android:text="Enter"
+
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userIn"
+                app:layout_constraintVertical_bias="0.538" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+
+                android:layout_marginEnd="44dp"
+
+                android:backgroundTint="@color/clearBtn"
+                android:text="Clear"
+
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userIn"
+                app:layout_constraintVertical_bias="0.512" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/smlCard"
+                android:layout_width="359dp"
+                android:layout_height="243dp"
+                app:cardBackgroundColor="@color/bg"
+
+                app:cardCornerRadius="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/resDisplay"
+                    android:layout_width="352dp"
+                    android:layout_height="match_parent"
+
+                    android:textAlignment="center"
+                    android:textSize="40sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
